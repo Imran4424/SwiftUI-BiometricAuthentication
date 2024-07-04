@@ -149,10 +149,10 @@ extension Home {
     func authenticateUser() {
         let scanner = LAContext()
         
-        scanner.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To Unlock \(userName)") { status, error in
+        scanner.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To Unlock \(userName)") { (status, error) in
             
             if error != nil {
-                print(error!.localizedDescription)
+                print(error?.localizedDescription ?? "error is nil")
                 return
             }
             
