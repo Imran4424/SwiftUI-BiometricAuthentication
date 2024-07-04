@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D9164432C3716800009D86A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9164422C3716800009D86A /* Extensions.swift */; };
 		1DEC97A12C267FB8007C7C6D /* BiometricAuthenticationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC97A02C267FB8007C7C6D /* BiometricAuthenticationApp.swift */; };
 		1DEC97A32C267FB8007C7C6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC97A22C267FB8007C7C6D /* ContentView.swift */; };
 		1DEC97A52C267FB9007C7C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC97A42C267FB9007C7C6D /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D9164422C3716800009D86A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1DEC979D2C267FB8007C7C6D /* BiometricAuthentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiometricAuthentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEC97A02C267FB8007C7C6D /* BiometricAuthenticationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationApp.swift; sourceTree = "<group>"; };
 		1DEC97A22C267FB8007C7C6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				1DEC97A02C267FB8007C7C6D /* BiometricAuthenticationApp.swift */,
 				1DEC97A22C267FB8007C7C6D /* ContentView.swift */,
+				1D9164422C3716800009D86A /* Extensions.swift */,
 				1DEC97A42C267FB9007C7C6D /* Assets.xcassets */,
 				1DEC97A62C267FB9007C7C6D /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DEC97A32C267FB8007C7C6D /* ContentView.swift in Sources */,
+				1D9164432C3716800009D86A /* Extensions.swift in Sources */,
 				1DEC97A12C267FB8007C7C6D /* BiometricAuthenticationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,9 +15,11 @@ struct Home: View {
         VStack {
             Spacer(minLength: 0)
             
-            Image(systemName: "lock.fill")
+            Image(systemName: "lock")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                // dynamic frame
+                .padding(.horizontal, 35)
                 .frame(width: 250)
             
             HStack {
@@ -34,11 +36,14 @@ struct Home: View {
                 Spacer(minLength: 0)
             }
             .padding()
+            .padding(.leading, 15)
             
             HStack {
                 Image(systemName: "envelope")
                     .font(.title2)
                     .foregroundStyle(.white)
+                    .frame(width: 35)
+                
                 TextField("EMAIL", text: $userName)
             }
             .padding()
@@ -51,7 +56,7 @@ struct Home: View {
                     .font(.title2)
                     .foregroundStyle(.white)
                 
-                TextField("PASSWORD", text: $password)
+                SecureField("PASSWORD", text: $password)
             }
             .padding()
             .background(Color.white.opacity(password == "" ? 0 : 0.12))
@@ -72,18 +77,35 @@ struct Home: View {
             }
             .padding(.top)
             
+            // forget button
+            
             Button {
                 
             } label: {
                 Text("Forget password?")
+                    .foregroundStyle(Color.green)
             }
 
-
-            
-            
             Spacer(minLength: 0)
+            
+            // signup
+            
+            HStack(spacing: 5) {
+                Text("Don't have an account?")
+                    .foregroundStyle(Color.white.opacity(0.6))
+                
+                Button {
+                    
+                } label: {
+                    Text("Signup")
+                        .fontWeight(.heavy)
+                        .foregroundStyle(Color.green)
+                }
+
+            }
+            .padding(.vertical)
         }
-        .background(Color.indigo.ignoresSafeArea(.all, edges: .all))
+        .background(Color.gray.ignoresSafeArea(.all, edges: .all))
     }
 }
 
