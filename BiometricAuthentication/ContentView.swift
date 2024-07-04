@@ -42,7 +42,7 @@ struct Home: View {
                 TextField("EMAIL", text: $userName)
             }
             .padding()
-            .background(Color.white.opacity(0.12))
+            .background(Color.white.opacity(userName == "" ? 0 : 0.12))
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .padding(.horizontal)
             
@@ -50,12 +50,35 @@ struct Home: View {
                 Image(systemName: "key.horizontal")
                     .font(.title2)
                     .foregroundStyle(.white)
+                
                 TextField("PASSWORD", text: $password)
             }
             .padding()
-            .background(Color.white.opacity(0.12))
+            .background(Color.white.opacity(password == "" ? 0 : 0.12))
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .padding(.horizontal)
+            .padding(.top)
+            
+            Button {
+                
+            } label: {
+                Text("LOGIN")
+                    .fontWeight(.heavy)
+                    .foregroundStyle(.black)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 150) // need to replace
+                    .background(Color.green.opacity(0.75))
+                    .clipShape(Capsule())
+            }
+            .padding(.top)
+            
+            Button {
+                
+            } label: {
+                Text("Forget password?")
+            }
+
+
             
             
             Spacer(minLength: 0)
